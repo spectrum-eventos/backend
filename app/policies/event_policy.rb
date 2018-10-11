@@ -25,16 +25,12 @@ class EventPolicy
   end
 
   def destroy?
-    admin? && !self?
+    admin?
   end
 
   private
 
   def admin?
     current_member.class.name.eql?('Admin')
-  end
-
-  def self?
-    current_member.id.eql?(admin.id)
   end
 end
