@@ -1,0 +1,9 @@
+default: &default
+  adapter: <%= ENV['DATABASE_ADAPTER'] || 'postgresql' %>
+  encoding: <%= ENV['DATABASE_ENCODING'] || 'UTF-8' %>
+  pool: <%= ENV['DATABASE_POOL'] || '5' %>
+  timeout: <%= ENV['DATABASE_TIMEOUT'] || '5000' %>
+
+test: *default
+development: *default
+production: *default

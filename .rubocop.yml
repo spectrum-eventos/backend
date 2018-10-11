@@ -1,0 +1,48 @@
+Rails:
+  Enabled: true
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'spec/**/*helper.rb'
+    - 'spec/support/**/*.rb'
+    - 'tmp/**/*'
+    - 'db/**/*.rb'
+    - '**/schema.rb'
+    - 'app/swaggers/**/*.rb'
+    - 'lib/swagger_responses/**/*.rb'
+    - 'lib/tasks/**/*.rake'
+    - 'app/controllers/docs_controller.rb'
+    - 'app/services/socket_io/emitter.rb'
+    - 'app/services/s3/signer.rb'
+    - 'Guardfile'
+  TargetRubyVersion: 2.5
+
+Style/Encoding:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Layout/IndentHeredoc:
+  EnforcedStyle: powerpack
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - 'db/**/*.rb'
+    - '**/schema.rb'
+    - 'config/**/*.rb'
+
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - 'db/**/*.rb'
+    - '**/schema.rb'
+    - 'spec/**/*.rb'
+    - 'config/**/*.rb'
+
+Documentation:
+  Enabled: false

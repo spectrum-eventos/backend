@@ -1,0 +1,29 @@
+pt-BR:
+  mailers:
+    subjects:
+      confirmation_instructions: 'Spectrum: Confirmação de conta'
+      reset_password_instructions: 'Spectrum: Solicitação de alteração ou recuperação de senha'
+      unlock_instructions: 'Spectrum: Instruções de desbloqueio'
+      password_change: 'Spectrum: Alteração de senha realizada com sucesso'
+    custom_devise_mailer:
+      password_change:
+        hello_you_there: 'Olá %{email}, sua senha foi atualizada com sucesso!'
+        why_we_sent_the_email: >-
+          Estamos te enviando este email para confirmar a sua alteração de
+          senha! Caso você não tenha alterado a sua senha recentemente, entre em
+          contato com a nossa equipe!
+        return_to_site: Clique aqui para fazer login...
+        on_error: >-
+          Caso não seja possível clicar no botão acima, copie e cole o link
+          abaixo em seu navegador:
+      reset_password_instructions:
+        what_you_requested: Você solicitou a troca de senha para a sua conta.
+        go_here: Clique aqui para continuar...
+        on_error: >-
+          Caso não seja possível clicar no botão acima, copie e cole o link
+          abaixo em seu navegador:
+        why_we_are_here: >-
+          Estamos aqui para te ajudar, caso não tenha sido você a realizar essa
+          solicitação, por favor, ignore este email! Em caso de dúvidas, entre
+          em contato com a nossa equipe!
+        thanks: Obrigado!

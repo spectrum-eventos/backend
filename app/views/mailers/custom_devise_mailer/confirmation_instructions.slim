@@ -1,0 +1,63 @@
+- content_for(:image_path) { "confirmation_instructions.png" }
+
+table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"
+  tbody
+    tr
+      td
+        .innerbg
+        table.devicewidth align="center" border="0" cellpadding="0" cellspacing="0" width="600"
+          tbody
+            tr
+              td width="100%"
+                table.devicewidth align="center" border="0" cellpadding="0" cellspacing="0" width="600"
+                  tbody
+                    tr
+                      td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;")
+                    tr
+                      td
+                        table.devicewidthinner align="center" border="0" cellpadding="0" cellspacing="0" width="560"
+                          tbody
+                            tr
+                              td style="font-family: Helvetica, arial, sans-serif; font-size: 30px; color: #333333; text-align:left; line-height: 30px;"
+                                p
+                                  = t(".hello")
+                            tr
+                              td style="font-family: Helvetica, arial, sans-serif; font-size: 16px; color: #666666; text-align:left; line-height: 30px;"
+                                p
+                                  = t(".thrilled")
+                            tr
+                              td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;" width="100%"
+                            tr
+                              td style="font-family: Helvetica, arial, sans-serif; font-size: 16px; color: #666666; text-align:left; line-height: 30px;"
+                                p
+                                  = t(".what_we_want")
+                            tr
+                              td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;" width="100%"
+                            tr
+                              td style="font-family: Helvetica, arial, sans-serif; font-size: 16px; color: #666666; text-align:left; line-height: 30px;"
+                                p
+                                  = t(".dont_be_afraid")
+                            tr
+                              td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;" width="100%"
+                            tr
+                              td style="font-family: Helvetica, arial, sans-serif; font-size: 16px; color: #666666; text-align:left; line-height: 30px;"
+                                p
+                                  = t(".confirmation_link")
+                            tr
+                              td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;" width="100%"
+                            tr
+                              td
+                                table.devicewidthinner align="center" border="0" cellpadding="0" cellspacing="0" width="560"
+                                  tbody
+                                    tr
+                                      td
+                                        p style="font-family: Helvetica, arial, sans-serif; font-size: 30px; color: #333333; text-align:center; line-height: 30px;"
+                                          = self.methods
+                                          = link_to t('.confirm_my_account'), confirmation_url(@resource, {confirmation_token: @token, config: message['client-config'].to_s, redirect_url: message['redirect-url']}, protocol: 'https').html_safe
+
+                            tr
+                              td height="40" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;" width="100%"
+                            tr
+                              td style="font-family: Helvetica, arial, sans-serif; font-size: 16px; color: #666666; text-align:left; line-height: 30px;"
+                                p
+                                  = t(".follow_up_email")

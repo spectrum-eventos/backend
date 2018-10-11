@@ -1,0 +1,5 @@
+pt-BR:
+  pundit:
+    admin_policy:
+      destroy?: Você não possui permissão para se deletar!
+      update?: Você não possui permissão para editar outro administrador!
