@@ -6,7 +6,8 @@ module V1
 
     def index
       authorize Event
-      events = Event.order(:created_at)
+      search = Event.search(params[:search])
+      events = search.result
       serializer = EventSerializer.new(events)
 
       render json: serializer.serialize_with_pagination(params[:page]), status: :ok

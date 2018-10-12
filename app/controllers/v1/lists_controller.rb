@@ -6,7 +6,8 @@ module V1
 
     def index
       authorize List
-      lists = List.order(:created_at)
+      search = List.search(params[:search])
+      lists = search.result
       serializer = ListSerializer.new(lists)
 
       render json: serializer.serialize_with_pagination(params[:page]), status: :ok

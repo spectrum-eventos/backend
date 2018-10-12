@@ -6,7 +6,8 @@ module V1
 
     def index
       authorize Presence
-      presences = Presence.order(:created_at)
+      search = Presence.search(params[:search])
+      presences = search.result
       serializer = PresenceSerializer.new(presences)
 
       render json: serializer.serialize_with_pagination(params[:page]), status: :ok
