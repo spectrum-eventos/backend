@@ -10,6 +10,7 @@ class EventSerializer
 
   def initialize(relation)
     @relation = relation
+    @size = relation.count
   end
 
   def serialize
@@ -29,7 +30,7 @@ class EventSerializer
 
   def pagination
     {
-      count: Event.count,
+      count: @size,
       current_page: @relation.current_page,
       total_pages: @relation.total_pages,
       next_page: @relation.next_page,

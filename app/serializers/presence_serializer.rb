@@ -11,6 +11,7 @@ class PresenceSerializer
 
   def initialize(relation)
     @relation = relation
+    @size = relation.count
   end
 
   def serialize
@@ -36,7 +37,7 @@ class PresenceSerializer
 
   def pagination
     {
-      count: Presence.count,
+      count: @size,
       current_page: @relation.current_page,
       total_pages: @relation.total_pages,
       next_page: @relation.next_page,
