@@ -11,7 +11,7 @@ class PresenceSerializer
 
   def initialize(relation)
     @relation = relation
-    @size = relation.count
+    @size = relation.count if relation.methods.include?(:count)
   end
 
   def serialize
